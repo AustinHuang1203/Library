@@ -1,0 +1,16 @@
+body{
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+
+.banner {
+    display:flex;
+    width:100%;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+    height:150px;
+    font-size:3rem;
+    background-color:lightgrey;
+}
