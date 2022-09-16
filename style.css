@@ -20,16 +20,16 @@ body{
 
 /* pop up form */
 .form1{
-    visibility:visible;
+    visibility:hidden;
     display:flex;
     flex-wrap:wrap;
     position:fixed;
     top:50%;
     left:50%;
-    margin-top:-325px; 
+    margin-top:-300px; 
     margin-left:-250px;
     width:500px;
-    height:650px;
+    height:600px;
     background-color:grey;
 }
 
