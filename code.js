@@ -21,6 +21,7 @@ const submit1 = document.getElementById("submit");
 submit1.addEventListener("click",addb);
 submit1.addEventListener("click",generate);
 submit1.addEventListener("click",adde);
+submit1.addEventListener("click",deladd);
 
 function addb(){
     let title = document.getElementById("title");
@@ -46,6 +47,9 @@ function generate(){
         </div>
         <button type="button" class="read2" id="books${i}">
           Read
+        </button>
+        <button type="button" class="del2" id="bookss${i}">
+        Delete
         </button>
         </div>`
     }
@@ -101,6 +105,7 @@ function dele(x){
     myLibrary.splice(x,1);
     generate();
     adde();
+    deladd();
 }
 
 
