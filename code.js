@@ -19,6 +19,8 @@ function addBookToLibrary(title,author,pages,read){
 
 const submit1 = document.getElementById("submit");
 submit1.addEventListener("click",addb);
+submit1.addEventListener("click",generate);
+submit1.addEventListener("click",adde);
 
 function addb(){
     let title = document.getElementById("title");
@@ -26,6 +28,27 @@ function addb(){
     let pages = document.getElementById("pages");
     let read = document.getElementById("read");
     return addBookToLibrary(title.value,author.value,pages.value,read.value);
+}
+
+function generate(){
+    document.getElementById("container1").innerHTML = "";
+    for (let i=0;i<myLibrary.length;i++){
+        document.getElementById("container1").innerHTML += 
+        `<div class="books1">
+        <div>
+          Book title
+        </div>
+        <div>
+          Book author
+        </div>
+        <div>
+          Book pages
+        </div>
+        <button type="button" class="read2" id="books${i}">
+          Read
+        </button>
+        </div>`
+    }
 }
 
 
@@ -48,8 +71,8 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
   
 
 // add read buttons
-const read2 = document.getElementsByClassName("book2");
 function adde (){
+    const read2 = document.getElementsByClassName("read2");
     for (let i = 0; i<read2.length;i++){
         read2[i].addEventListener("click",()=>toggle(i));
     }
@@ -64,6 +87,23 @@ function toggle(x){
         toggle1.innerHTML = "Read"
     }
 }
+
+
+//delete button 
+function deladd(){
+    const del2 = document.getElementsByClassName("del2");
+    for (let i = 0;i<del2.length;i++){
+        del2[i].addEventListener("click",()=>dele(i));
+    }
+}
+
+function dele(x){
+    myLibrary.splice(x,1);
+    generate();
+    adde();
+}
+
+
 
 
 
