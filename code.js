@@ -23,12 +23,29 @@ submit1.addEventListener("click",generate);
 submit1.addEventListener("click",adde);
 submit1.addEventListener("click",deladd);
 
+/*
+function validate(){
+    let title = document.getElementById("title");
+    let author = document.getElementById("author");
+    let pages = document.getElementById("pages");
+    if (title.checkValidity() && author.checkValidity() && pages.checkValidity()){
+        addb();
+        generate();
+        adde();
+        deladd();
+    } else{}
+}
+
+*/
+
 function addb(){
     let title = document.getElementById("title");
     let author = document.getElementById("author");
     let pages = document.getElementById("pages");
+    if (!(title.checkValidity() && author.checkValidity() && pages.checkValidity())){
+        return;
+    }
     let read = document.getElementById("read").checked;
-    console.log(read)
     let read3 = "Read"
     if (read==true){
         read3 = "Read"
@@ -90,13 +107,16 @@ function adde (){
 }
 
 function toggle(x){
-    let toggle1 = document.getElementById(`books${x}`);
-    if(toggle1.innerHTML == "Read"){
-        toggle1.innerHTML = "Unread"
+    let toggle1 = myLibrary[x];
+    if(toggle1.read == "Read"){
+        toggle1.read = "Unread"
     }
     else {
-        toggle1.innerHTML = "Read"
+        toggle1.read = "Read"
     }
+    generate();
+    adde();
+    deladd();
 }
 
 
