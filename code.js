@@ -61,21 +61,25 @@ function generate(){
     for (let i=0;i<myLibrary.length;i++){
         document.getElementById("container1").innerHTML += 
         `<div class="books1">
-            <div>
-            ${myLibrary[i].title}
+            <div class="title3">
+                ${myLibrary[i].title}
             </div>
-            <div>
+            <div class="title3">
                 ${myLibrary[i].author}
             </div>
-            <div>
+            <div class="title3">
                 ${myLibrary[i].pages}
             </div>
+            <div class="title4">
             <button type="button" class="read2" id="books${i}">
                 ${myLibrary[i].read}
             </button>
+            </div>
+            <div class="title4">
             <button type="button" class="del2" id="bookss${i}">
             Delete
             </button>
+            </div>
         </div>`
     }
 }
