@@ -48,27 +48,27 @@
 
 
 
-    <form class="form1" id="form1">
-      <div>
+    <form class="form1" id="form1" onsubmit="return dontsubmit();">
+      <div class="fillin">
         Fill in
       </div>
-      <div>
+      <div class="title1">
         <label for="title">Title</label>
         <input type="text"  id="title" name="title" required> 
       </div>
-      <div>
+      <div class="author1">
         <label for="author">Author</label>
         <input type="text" id="author" name="author" required> 
       </div>
-      <div>
+      <div class="pages1">
         <label for="pages">Pages</label>
-        <input type="text" id="pages" name="pages" required> 
+        <input type="number" id="pages" name="pages" required> 
       </div>
-      <div>
+      <div class="read1">
         <label for="read">Read yet?</label>
         <input type="checkbox" id="read" name="read"> 
       </div>
-      <button type="button" id="submit">Submit</button>
+      <button type="submit" id="submit" class="submit1">Submit</button>
     </form>
 
 

@@ -18,12 +18,14 @@ function addBookToLibrary(title,author,pages,read){
 }
 
 const submit1 = document.getElementById("submit");
+submit1.addEventListener("click",validate);
+/*
 submit1.addEventListener("click",addb);
 submit1.addEventListener("click",generate);
 submit1.addEventListener("click",adde);
 submit1.addEventListener("click",deladd);
+*/
 
-/*
 function validate(){
     let title = document.getElementById("title");
     let author = document.getElementById("author");
@@ -33,18 +35,16 @@ function validate(){
         generate();
         adde();
         deladd();
+        read.value=false;
+        document.getElementById("form1").style.visibility = "hidden";
     } else{}
 }
 
-*/
 
 function addb(){
     let title = document.getElementById("title");
     let author = document.getElementById("author");
     let pages = document.getElementById("pages");
-    if (!(title.checkValidity() && author.checkValidity() && pages.checkValidity())){
-        return;
-    }
     let read = document.getElementById("read").checked;
     let read3 = "Read"
     if (read==true){
@@ -80,11 +80,19 @@ function generate(){
 }
 
 
+function dontsubmit(){
+    return false;
+}
+
 // opens the form and closes it
 const openf = document.getElementById("openf");
 openf.addEventListener("click", openform);
 
 function openform (){
+
+    title.value="";
+    author.value="";
+    pages.value="";
     document.getElementById("form1").style.visibility = "visible";
 }
 
