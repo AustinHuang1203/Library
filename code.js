@@ -27,8 +27,15 @@ function addb(){
     let title = document.getElementById("title");
     let author = document.getElementById("author");
     let pages = document.getElementById("pages");
-    let read = document.getElementById("read");
-    return addBookToLibrary(title.value,author.value,pages.value,read.value);
+    let read = document.getElementById("read").checked;
+    console.log(read)
+    let read3 = "Read"
+    if (read==true){
+        read3 = "Read"
+    } else {
+        read3 = "Unread"
+    }
+    return addBookToLibrary(title.value,author.value,pages.value,read3);
 }
 
 function generate(){
@@ -37,16 +44,16 @@ function generate(){
         document.getElementById("container1").innerHTML += 
         `<div class="books1">
         <div>
-          Book title
+          ${myLibrary[i].title}
         </div>
         <div>
-          Book author
+            ${myLibrary[i].author}
         </div>
         <div>
-          Book pages
+            ${myLibrary[i].pages}
         </div>
         <button type="button" class="read2" id="books${i}">
-          Read
+            ${myLibrary[i].read}
         </button>
         <button type="button" class="del2" id="bookss${i}">
         Delete
