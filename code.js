@@ -62,13 +62,17 @@ function generate(){
         document.getElementById("container1").innerHTML += 
         `<div class="books1">
             <div class="title3">
-                ${myLibrary[i].title}
+            <div class="title6">
+                Title: ${myLibrary[i].title}
+            </div>
             </div>
             <div class="title3">
-                ${myLibrary[i].author}
+            <div class="title6">
+                Author: ${myLibrary[i].author}
             </div>
-            <div class="title3">
-                ${myLibrary[i].pages}
+            </div>
+            <div class="title5">
+                Page Number: ${myLibrary[i].pages}
             </div>
             <div class="title4">
             <button type="button" class="read2" id="books${i}">
