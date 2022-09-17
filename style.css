@@ -36,6 +36,7 @@ body{
     width:500px;
     height:600px;
     background-color:grey;
+    border: solid 5px black;
 }
 
 .fillin{
