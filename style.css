@@ -36,6 +36,15 @@ body{
 
 
 
+/* books */
+.books1{
+    display:flex;
+    background-color:grey;
+    height:300px;
+    width:250px;
+}
+
+
 
 
 

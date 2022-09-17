@@ -46,3 +46,25 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
     }
   });
   
+
+// add read buttons
+const read2 = document.getElementsByClassName("book2");
+function adde (){
+    for (let i = 0; i<read2.length;i++){
+        read2[i].addEventListener("click",()=>toggle(i));
+    }
+}
+
+function toggle(x){
+    let toggle1 = document.getElementById(`books${x}`);
+    if(toggle1.innerHTML == "Read"){
+        toggle1.innerHTML = "Unread"
+    }
+    else {
+        toggle1.innerHTML = "Read"
+    }
+}
+
+
+
+
