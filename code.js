@@ -30,6 +30,7 @@ function validate(){
     let title = document.getElementById("title");
     let author = document.getElementById("author");
     let pages = document.getElementById("pages");
+    let read = document.getElementById("read")
     if (title.checkValidity() && author.checkValidity() && pages.checkValidity()){
         addb();
         generate();
@@ -60,21 +61,21 @@ function generate(){
     for (let i=0;i<myLibrary.length;i++){
         document.getElementById("container1").innerHTML += 
         `<div class="books1">
-        <div>
-          ${myLibrary[i].title}
-        </div>
-        <div>
-            ${myLibrary[i].author}
-        </div>
-        <div>
-            ${myLibrary[i].pages}
-        </div>
-        <button type="button" class="read2" id="books${i}">
-            ${myLibrary[i].read}
-        </button>
-        <button type="button" class="del2" id="bookss${i}">
-        Delete
-        </button>
+            <div>
+            ${myLibrary[i].title}
+            </div>
+            <div>
+                ${myLibrary[i].author}
+            </div>
+            <div>
+                ${myLibrary[i].pages}
+            </div>
+            <button type="button" class="read2" id="books${i}">
+                ${myLibrary[i].read}
+            </button>
+            <button type="button" class="del2" id="bookss${i}">
+            Delete
+            </button>
         </div>`
     }
 }
